@@ -10,6 +10,7 @@ public class ScoreTrakker {
 		 * read student data from filename and 
 		 * store Student objects in ArrayList<Student> scores
 		 */
+		scores = new ArrayList<Student>(); //reset ArrayList of Students
 		FileReader reader = new FileReader(filename);
 		Scanner in = new Scanner(reader);
 		int i=0;
