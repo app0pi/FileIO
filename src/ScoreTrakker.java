@@ -22,7 +22,7 @@ public class ScoreTrakker {
 				scores.add(s);
 			}
 			catch(NumberFormatException e) {
-				System.out.println("<Error for a student: score is not a valid integer>");
+				System.out.println("Invalid integer score for: " + name);
 			}
 			i++;
 		}
