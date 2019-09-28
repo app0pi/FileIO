@@ -3,6 +3,7 @@ import java.util.*;
 
 public class ScoreTrakker {
 	private static ArrayList<Student> scores = new ArrayList<Student>();
+	private String[] files = {"scores.txt", "badscore.txt", "nofile.txt" };
 	public void loadDataFromFile(String filename) throws FileNotFoundException {
 		/*
 		 * read student data from filename and 
