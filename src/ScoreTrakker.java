@@ -16,8 +16,14 @@ public class ScoreTrakker {
 		while(in.hasNextLine()) {
 			String name = in.nextLine();
 			String score = in.nextLine();
-			Student s = new Student(name, Integer.parseInt(score));
-			scores.add(s);
+			Student s = new Student(name, 0);
+			try{
+				s = new Student(name, Integer.parseInt(score));
+				scores.add(s);
+			}
+			catch(NumberFormatException e) {
+				System.out.println("<Error for a student: score is not a valid integer>");
+			}
 			i++;
 		}
 		return;
@@ -34,6 +40,7 @@ public class ScoreTrakker {
 	}
 	public static void main(String[] args) throws FileNotFoundException {
 		ScoreTrakker st = new ScoreTrakker();
-		st.processFiles("scores.txt");
+		//st.processFiles("scores.txt");
+		st.processFiles("badscores.txt");
 	}
 }
