@@ -14,11 +14,8 @@ public class ScoreTrakker {
 		int i=0;
 		while(in.hasNextLine()) {
 			String name = in.nextLine();
-			int scoreVal = in.nextInt();
-			if(in.hasNextLine()) {
-				String foo = in.nextLine();
-			}
-			Student s = new Student(name, scoreVal);
+			String score = in.nextLine();
+			Student s = new Student(name, Integer.parseInt(score));
 			scores.add(s);
 			i++;
 		}
