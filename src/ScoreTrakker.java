@@ -34,13 +34,21 @@ public class ScoreTrakker {
 			System.out.println(s);
 		}
 	}
-	public void processFiles(String filename) throws FileNotFoundException {
-		loadDataFromFile(filename);
-		printInOrder();
+	public void processFiles() throws FileNotFoundException {
+		for(String file: files) {
+			try {
+				loadDataFromFile(file);
+				printInOrder();
+				System.out.println();
+			}
+			catch(FileNotFoundException e) {
+				System.out.println("Cannot find file: " + file);
+				System.out.println();
+			}
+		}
 	}
 	public static void main(String[] args) throws FileNotFoundException {
 		ScoreTrakker st = new ScoreTrakker();
-		//st.processFiles("scores.txt");
-		st.processFiles("badscores.txt");
+		st.processFiles();
 	}
 }
