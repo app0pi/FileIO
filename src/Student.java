@@ -10,7 +10,7 @@ public class Student implements Comparable<Student>{
 	}
 	@Override
 	public int compareTo(Student o) {
-		// TODO make it so that the Student with the name comes first in the alphabet is 
+		//compares Students' names alphabetically
 		return this.name.compareTo(o.name);
 	}
 	@Override
